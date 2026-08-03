@@ -1,0 +1,274 @@
+{
+  "ts": "2026-07-10T09:29:53.813208+00:00",
+  "cross_exchange": [
+    {
+      "coin": "BTC",
+      "buy_at": "binance",
+      "sell_at": "okx",
+      "ask": 64410.14,
+      "bid": 64424.8,
+      "gross_pct": 0.02276039145389762,
+      "fee_pct": 0.3,
+      "net_pct": -0.2772396085461024,
+      "net_usd_per_round": -27.72396085461024,
+      "all_venues": {
+        "binance": {
+          "bid": 64410.13,
+          "ask": 64410.14
+        },
+        "okx": {
+          "bid": 64424.8,
+          "ask": 64424.9
+        },
+        "bybit": {
+          "bid": 64419.9,
+          "ask": 64420.0
+        }
+      }
+    },
+    {
+      "coin": "BNB",
+      "buy_at": "binance",
+      "sell_at": "okx",
+      "ask": 576.42,
+      "bid": 576.5,
+      "gross_pct": 0.013878768953200954,
+      "fee_pct": 0.3,
+      "net_pct": -0.28612123104679904,
+      "net_usd_per_round": -28.612123104679902,
+      "all_venues": {
+        "binance": {
+          "bid": 576.41,
+          "ask": 576.42
+        },
+        "okx": {
+          "bid": 576.5,
+          "ask": 576.6
+        },
+        "bybit": {
+          "bid": 576.4,
+          "ask": 576.5
+        }
+      }
+    },
+    {
+      "coin": "ETH",
+      "buy_at": "binance",
+      "sell_at": "bybit",
+      "ask": 1788.48,
+      "bid": 1788.66,
+      "gross_pct": 0.010064412238328843,
+      "fee_pct": 0.3,
+      "net_pct": -0.28993558776167117,
+      "net_usd_per_round": -28.993558776167117,
+      "all_venues": {
+        "binance": {
+          "bid": 1788.47,
+          "ask": 1788.48
+        },
+        "okx": {
+          "bid": 1788.56,
+          "ask": 1788.57
+        },
+        "bybit": {
+          "bid": 1788.66,
+          "ask": 1788.67
+        }
+      }
+    },
+    {
+      "coin": "SOL",
+      "buy_at": "binance",
+      "sell_at": "okx",
+      "ask": 79.21,
+      "bid": 79.21,
+      "gross_pct": 0.0,
+      "fee_pct": 0.3,
+      "net_pct": -0.3,
+      "net_usd_per_round": -30.0,
+      "all_venues": {
+        "binance": {
+          "bid": 79.2,
+          "ask": 79.21
+        },
+        "okx": {
+          "bid": 79.21,
+          "ask": 79.22
+        },
+        "bybit": {
+          "bid": 79.2,
+          "ask": 79.21
+        }
+      }
+    },
+    {
+      "coin": "XRP",
+      "buy_at": "binance",
+      "sell_at": "bybit",
+      "ask": 1.1155,
+      "bid": 1.1155,
+      "gross_pct": 0.0,
+      "fee_pct": 0.3,
+      "net_pct": -0.3,
+      "net_usd_per_round": -30.0,
+      "all_venues": {
+        "binance": {
+          "bid": 1.1154,
+          "ask": 1.1155
+        },
+        "okx": {
+          "bid": 1.1154,
+          "ask": 1.1155
+        },
+        "bybit": {
+          "bid": 1.1155,
+          "ask": 1.1156
+        }
+      }
+    },
+    {
+      "coin": "DOGE",
+      "buy_at": "binance",
+      "sell_at": "okx",
+      "ask": 0.07432,
+      "bid": 0.07432,
+      "gross_pct": 0.0,
+      "fee_pct": 0.3,
+      "net_pct": -0.3,
+      "net_usd_per_round": -30.0,
+      "all_venues": {
+        "binance": {
+          "bid": 0.07431,
+          "ask": 0.07432
+        },
+        "okx": {
+          "bid": 0.07432,
+          "ask": 0.07433
+        },
+        "bybit": {
+          "bid": 0.07431,
+          "ask": 0.07432
+        }
+      }
+    }
+  ],
+  "triangular": {
+    "path_usdt_btc_eth_usdt": {
+      "net_usd": -45.452745944918206,
+      "net_pct": -0.45452745944918205
+    },
+    "path_usdt_eth_btc_usdt": {
+      "net_usd": -48.05449580489403,
+      "net_pct": -0.48054495804894026
+    },
+    "btc_usdt": {
+      "bid": 64410.99,
+      "ask": 64411.0
+    },
+    "eth_usdt": {
+      "bid": 1788.6,
+      "ask": 1788.61
+    },
+    "eth_btc": {
+      "bid": 0.02776,
+      "ask": 0.02777
+    }
+  },
+  "stablecoin": [
+    {
+      "stable": "FDUSD",
+      "bid": 0.998,
+      "ask": 0.9981,
+      "deviation_bps": -20.000000000000018,
+      "potential_profit_usd": 1.7763568394002505e-14
+    },
+    {
+      "stable": "DAI",
+      "bid": 0.0,
+      "ask": 0.0,
+      "deviation_bps": -10000.0,
+      "potential_profit_usd": 9980.0
+    },
+    {
+      "stable": "TUSD",
+      "bid": 0.999,
+      "ask": 0.9991,
+      "deviation_bps": -10.000000000000009,
+      "potential_profit_usd": -9.999999999999991
+    }
+  ],
+  "volatility": [
+    {
+      "symbol": "PEPEUSDT",
+      "last": 2.7e-06,
+      "range_24h_pct": 4.651162790697679,
+      "chg_24h_pct": 3.448,
+      "trend_strength": 0.7413199999999992,
+      "grid_potential_pct": 0.08502325581395358,
+      "grid_potential_usd": 8.502325581395358
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "last": 0.07432,
+      "range_24h_pct": 3.3726578764746726,
+      "chg_24h_pct": 2.242,
+      "trend_strength": 0.6647576131687238,
+      "grid_potential_pct": 0.059453157529493456,
+      "grid_potential_usd": 5.9453157529493454
+    },
+    {
+      "symbol": "ETHUSDT",
+      "last": 1788.6,
+      "range_24h_pct": 3.3256543051634195,
+      "chg_24h_pct": 1.992,
+      "trend_strength": 0.5989798750000009,
+      "grid_potential_pct": 0.05851308610326839,
+      "grid_potential_usd": 5.851308610326839
+    },
+    {
+      "symbol": "BTCUSDT",
+      "last": 64417.43,
+      "range_24h_pct": 3.1249944969526338,
+      "chg_24h_pct": 2.369,
+      "trend_strength": 0.758081334962398,
+      "grid_potential_pct": 0.05449988993905268,
+      "grid_potential_usd": 5.449988993905268
+    },
+    {
+      "symbol": "SOLUSDT",
+      "last": 79.21,
+      "range_24h_pct": 2.8345845198032587,
+      "chg_24h_pct": 1.525,
+      "trend_strength": 0.5379977168949778,
+      "grid_potential_pct": 0.048691690396065176,
+      "grid_potential_usd": 4.8691690396065175
+    },
+    {
+      "symbol": "XRPUSDT",
+      "last": 1.1154,
+      "range_24h_pct": 2.696980854197338,
+      "chg_24h_pct": 1.937,
+      "trend_strength": 0.7182105119453954,
+      "grid_potential_pct": 0.04593961708394677,
+      "grid_potential_usd": 4.593961708394676
+    },
+    {
+      "symbol": "WIFUSDT",
+      "last": 0.1594,
+      "range_24h_pct": 2.6164645820038244,
+      "chg_24h_pct": 0.126,
+      "trend_strength": 0.048156585365853745,
+      "grid_potential_pct": 0.04432929164007649,
+      "grid_potential_usd": 4.432929164007649
+    },
+    {
+      "symbol": "BNBUSDT",
+      "last": 576.44,
+      "range_24h_pct": 1.7816274074856526,
+      "chg_24h_pct": 0.893,
+      "trend_strength": 0.5012271343873516,
+      "grid_potential_pct": 0.027632548149713054,
+      "grid_potential_usd": 2.7632548149713054
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[Unit]
+Description=BTC Bitget observe-only strategy board
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/btc-funding-arb
+User=btcbot
+Group=btcbot
+ExecStart=/opt/btc-funding-arb/.venv/bin/python -u /opt/btc-funding-arb/run_bitget_observer_board.py --interval-sec 60 --quote-usdt 5
+Restart=always
+RestartSec=15
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

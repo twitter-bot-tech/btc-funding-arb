@@ -1,0 +1,433 @@
+{
+  "days": {
+    "2026-06-25": {
+      "scans": 413,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-06-26": {
+      "scans": 107,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-06-27": {
+      "scans": 116,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-06-28": {
+      "scans": 152,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-06-29": {
+      "scans": 220,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-06-30": {
+      "scans": 438,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-01": {
+      "scans": 170,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-02": {
+      "scans": 40,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-03": {
+      "scans": 237,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-04": {
+      "scans": 24,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-05": {
+      "scans": 21,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-06": {
+      "scans": 28,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-07": {
+      "scans": 162,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-08": {
+      "scans": 24,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-09": {
+      "scans": 28,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-10": {
+      "scans": 161,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-11": {
+      "scans": 39,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-12": {
+      "scans": 54,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-13": {
+      "scans": 45,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-14": {
+      "scans": 38,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-15": {
+      "scans": 44,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-16": {
+      "scans": 28,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-17": {
+      "scans": 23,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-18": {
+      "scans": 27,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-19": {
+      "scans": 25,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-20": {
+      "scans": 151,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-22": {
+      "scans": 188,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-23": {
+      "scans": 255,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-24": {
+      "scans": 271,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-25": {
+      "scans": 200,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-26": {
+      "scans": 59,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-27": {
+      "scans": 37,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-28": {
+      "scans": 39,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-29": {
+      "scans": 120,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-07-30": {
+      "scans": 37,
+      "opps_total": 7,
+      "sum_potential_usd": 178.9999999999998,
+      "best_single_usd": 25.999999999999925,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 7
+      }
+    },
+    "2026-07-31": {
+      "scans": 42,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-01": {
+      "scans": 23,
+      "opps_total": 2,
+      "sum_potential_usd": 50.00000000000007,
+      "best_single_usd": 25.000000000000036,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 2
+      }
+    },
+    "2026-08-02": {
+      "scans": 23,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-03": {
+      "scans": 265,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    }
+  }
+}

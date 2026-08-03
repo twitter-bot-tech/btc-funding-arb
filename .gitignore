@@ -1,0 +1,15 @@
+.env
+*.log
+__pycache__/
+*.pyc
+.wrangler/
+deploy/.wrangler/
+data/okx_order_ledger.jsonl
+data/bybit_order_ledger.jsonl
+data/gate_order_ledger.jsonl
+data/bitget_order_ledger.jsonl
+data/strategy_order_ledger.jsonl
+data/bitget_observer_log.jsonl
+data/bitget_observer_state.json
+data/bitget_observer_health.json
+data/bitget_observer_board.pid
