@@ -58,7 +58,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",
 .range { position:relative; height:74px; border:1px solid var(--line); border-radius:8px; background:#070b10; overflow:hidden; }
 .range .buy { position:absolute; left:0; top:0; bottom:0; width:15.0%; background:rgba(40,209,124,.24); }
 .range .sell { position:absolute; right:0; top:0; bottom:0; width:15.0%; background:rgba(76,163,255,.24); }
-.range .mark { position:absolute; left:76.8%; top:9px; bottom:9px; width:3px; background:#fff; border-radius:3px; }
+.range .mark { position:absolute; left:65.5%; top:9px; bottom:9px; width:3px; background:#fff; border-radius:3px; }
 .metricGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-top:8px; }
 .rules { display:grid; gap:8px; }
 .rule b { display:block; margin-bottom:4px; }
@@ -134,7 +134,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
   <div class="ticker">
     <div><b>BTC/USDT</b><span>AI Signal Terminal</span><span>Bitget Spot 15m / 4h 区间</span></div>
     <div class="tickerActions">
-      <div><span>LAST</span> <strong id="livePrice">$64,410.00</strong><span id="livePriceMeta" class="liveMeta">live 待刷新</span><span>DATA 08-04 00:30</span><span>数据正常</span></div>
+      <div><span>LAST</span> <strong id="livePrice">$64,342.37</strong><span id="livePriceMeta" class="liveMeta">live 待刷新</span><span>DATA 08-04 00:30</span><span>数据正常</span></div>
       <button id="manualRefresh" class="refreshButton" type="button">刷新</button>
       <span id="refreshCountdown" class="refreshCountdown">60s</span>
     </div>
@@ -144,12 +144,12 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
     <aside class="leftStack">
       <section class="panel">
         <div class="head"><b>SIGNAL STACK</b><span>4/6 passed</span></div>
-        <div class="body"><div class="signals"><div class='sig off'><div class='sigTop'><b>RSI</b><span>OFF</span></div><strong>60.4</strong><small>RSI(14) 低位回升</small></div>
-<div class='sig off'><div class='sigTop'><b>M15</b><span>OFF</span></div><strong>-0.10%</strong><small>15m 动量转正</small></div>
-<div class='sig on'><div class='sigTop'><b>H1</b><span>ON</span></div><strong>0.05%</strong><small>1h 动量不弱</small></div>
-<div class='sig on'><div class='sigTop'><b>VWAP</b><span>ON</span></div><strong>0.23%</strong><small>4h VWAP 修复</small></div>
-<div class='sig on'><div class='sigTop'><b>SMA</b><span>ON</span></div><strong>0.11%</strong><small>SMA8/21 结构</small></div>
-<div class='sig on'><div class='sigTop'><b>REGIME</b><span>ON</span></div><strong>8h 0.10%</strong><small>非单边下跌</small></div></div></div>
+        <div class="body"><div class="signals"><div class='sig off'><div class='sigTop'><b>RSI</b><span>OFF</span></div><strong>57.6</strong><small>RSI(14) 低位回升</small></div>
+<div class='sig off'><div class='sigTop'><b>M15</b><span>OFF</span></div><strong>-0.02%</strong><small>15m 动量转正</small></div>
+<div class='sig on'><div class='sigTop'><b>H1</b><span>ON</span></div><strong>-0.17%</strong><small>1h 动量不弱</small></div>
+<div class='sig on'><div class='sigTop'><b>VWAP</b><span>ON</span></div><strong>0.21%</strong><small>4h VWAP 修复</small></div>
+<div class='sig on'><div class='sigTop'><b>SMA</b><span>ON</span></div><strong>0.17%</strong><small>SMA8/21 结构</small></div>
+<div class='sig on'><div class='sigTop'><b>REGIME</b><span>ON</span></div><strong>8h 0.00%</strong><small>非单边下跌</small></div></div></div>
       </section>
       <section class="panel">
         <div class="head"><b>STRATEGY CONFIG</b><span>spot only</span></div>
@@ -219,7 +219,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
           <div class="range"><div class="buy"></div><div class="sell"></div><div class="mark"></div></div>
           <div class="metricGrid">
             <div class="metric"><span>低吸线</span><b>$64,039.87</b></div>
-            <div class="metric"><span>现价位置</span><b>76.77%</b></div>
+            <div class="metric"><span>现价位置</span><b>65.49%</b></div>
             <div class="metric"><span>止盈区</span><b>$64,459.29</b></div>
             <div class="metric"><span>止损线</span><b>$63,438.40</b></div>
             <div class="metric"><span>区间状态</span><b>区间中上部</b></div>
@@ -233,10 +233,10 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       <section class="panel">
         <div class="head"><b>MARKET CONTEXT</b><span>已纳入/可辅助判断</span></div>
         <div class="body miniGrid wide">
-          <div class="mini"><span>8h 涨跌</span><b class="good">0.10%</b></div>
-          <div class="mini"><span>24h 涨跌</span><b class="good">0.86%</b></div>
+          <div class="mini"><span>8h 涨跌</span><b class="good">0.00%</b></div>
+          <div class="mini"><span>24h 涨跌</span><b class="good">1.04%</b></div>
           <div class="mini"><span>24h 宽度</span><b>1.73%</b></div>
-          <div class="mini"><span>最新 15m 成交</span><b>12,276</b></div>
+          <div class="mini"><span>最新 15m 成交</span><b>923</b></div>
         </div>
       </section>
 
@@ -319,7 +319,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
 
       <section class="panel">
-        <div class="head"><b>TODAY / SESSION</b><span>08-05 11:00 SGT</span></div>
+        <div class="head"><b>TODAY / SESSION</b><span>08-05 11:15 SGT</span></div>
         <div class="body">
           <div class="miniGrid">
             <div class="mini"><span>今日 PnL</span><b class="good">$0.00</b></div>
@@ -332,7 +332,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
 
       <section class="panel">
-        <div class="head"><b>PAPER TRADING</b><span>08-05T11:09</span></div>
+        <div class="head"><b>PAPER TRADING</b><span>08-05T11:16</span></div>
         <div class="body">
           <div class="miniGrid">
             <div class="mini"><span>模拟动作</span><b class="">WAIT</b></div>
@@ -352,18 +352,18 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
 
       <section class="panel">
-        <div class="head"><b>BITGET OBSERVE</b><span>08-05T11:09</span></div>
+        <div class="head"><b>BITGET OBSERVE</b><span>08-05T11:16</span></div>
         <div class="body">
           <div class="observeGrid">
             <div class="mini"><span>观察动作</span><b class="">WAIT</b></div>
-            <div class="mini"><span>Bitget 实时价</span><b>$64,400.00</b></div>
+            <div class="mini"><span>Bitget 实时价</span><b>$64,345.01</b></div>
             <div class="mini"><span>UTA 可用</span><b>PUBLIC_TEST USDT</b></div>
             <div class="mini"><span>计划金额</span><b>5 USDT</b></div>
-            <div class="mini"><span>计划 BTC</span><b>0.00007763</b></div>
+            <div class="mini"><span>计划 BTC</span><b>0.00007770</b></div>
             <div class="mini"><span>观察止盈</span><b>1.20%</b></div>
             <div class="mini"><span>低吸上限</span><b>$64039.87</b></div>
             <div class="mini"><span>止损线</span><b>$63438.40</b></div>
-            <div class="mini observeWide"><span>信号状态</span><b>4/6 / 76.77% / 等待</b></div>
+            <div class="mini observeWide"><span>信号状态</span><b>4/6 / 65.49% / 等待</b></div>
           </div>
           <div class="gapList" style="margin-top:8px"><div class='gap'><span>阻断</span><b>价格不在低吸区或区间宽度不足</b></div></div>
         </div>
@@ -371,7 +371,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
 
       <section class="panel">
         <div class="head"><b>SCAN WINDOWS</b><span>最近 12 根 15m</span></div>
-        <div class="tableWrap"><table><thead><tr><th>SGT</th><th>信号</th><th>位置</th><th>振幅</th><th>状态</th></tr></thead><tbody><tr><td>08:15</td><td>3/6</td><td>12.11%</td><td>0.86%</td><td><span class='tag skip'>SKIP</span></td></tr><tr><td>08:30</td><td>6/6</td><td>11.72%</td><td>0.84%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>08:45</td><td>5/6</td><td>-3.82%</td><td>0.84%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:00</td><td>4/6</td><td>5.53%</td><td>0.89%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:15</td><td>6/6</td><td>27.15%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:30</td><td>5/6</td><td>38.73%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:45</td><td>5/6</td><td>64.06%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:00</td><td>5/6</td><td>85.14%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:15</td><td>5/6</td><td>78.46%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:30</td><td>4/6</td><td>80.62%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:45</td><td>5/6</td><td>69.81%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>11:00</td><td>4/6</td><td>76.77%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr></tbody></table></div>
+        <div class="tableWrap"><table><thead><tr><th>SGT</th><th>信号</th><th>位置</th><th>振幅</th><th>状态</th></tr></thead><tbody><tr><td>08:30</td><td>6/6</td><td>11.72%</td><td>0.84%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>08:45</td><td>5/6</td><td>-3.82%</td><td>0.84%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:00</td><td>4/6</td><td>5.53%</td><td>0.89%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:15</td><td>6/6</td><td>27.15%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:30</td><td>5/6</td><td>38.73%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>09:45</td><td>5/6</td><td>64.06%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:00</td><td>5/6</td><td>85.14%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:15</td><td>5/6</td><td>78.46%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:30</td><td>4/6</td><td>80.62%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>10:45</td><td>5/6</td><td>69.81%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>11:00</td><td>4/6</td><td>67.26%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>11:15</td><td>4/6</td><td>65.49%</td><td>0.94%</td><td><span class='tag watch'>WATCH</span></td></tr></tbody></table></div>
       </section>
 
       <section class="panel">

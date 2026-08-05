@@ -33,7 +33,7 @@ jobs:
 
       - name: Build public test board
         run: |
-          python refresh_strategy_board.py --no-backtest
+          python refresh_strategy_board.py --no-backtest --source bitget
           python paper_trader.py --capital 10000 --quote-usdt 50
           python run_bitget_observer_board.py --once --quote-usdt 5 --public-only
           mkdir -p public

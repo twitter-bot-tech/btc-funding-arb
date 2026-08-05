@@ -24,6 +24,7 @@ SPOT_CSV = DATA / "btcusdt_15m_spot.csv"
 REFRESH_STATE = DATA / "refresh_state.json"
 SYMBOL = "BTCUSDT"
 SPOT_KLINES_URL = "https://api.binance.com/api/v3/klines"
+BITGET_KLINES_URL = "https://api.bitget.com/api/v2/spot/market/candles"
 INTERVAL_MS = 15 * 60 * 1000
 
 
@@ -75,14 +76,59 @@ def fetch_spot_15m(days: int = 130) -> pd.DataFrame:
     return df
 
 
+def fetch_bitget_spot_15m(days: int = 130) -> pd.DataFrame:
+    DATA.mkdir(exist_ok=True)
+    start_ms = int((pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=days)).timestamp() * 1000)
+    end_ms = int(time.time() * 1000)
+    rows_out = []
+    cursor_end = end_ms
+    while cursor_end > start_ms:
+        payload = request_json(
+            BITGET_KLINES_URL,
+            {"symbol": SYMBOL, "granularity": "15min", "endTime": cursor_end, "limit": 1000},
+        )
+        rows = payload.get("data", []) if isinstance(payload, dict) else payload
+        if not rows:
+            break
+        rows = sorted(rows, key=lambda row: int(row[0]))
+        rows_out.extend(rows)
+        first = int(rows[0][0])
+        last = int(rows[-1][0])
+        print(f"bitget spot rows={len(rows_out):>6d} first={pd.Timestamp(first, unit='ms', tz='UTC')} last={pd.Timestamp(last, unit='ms', tz='UTC')}")
+        if first >= cursor_end:
+            break
+        cursor_end = first - INTERVAL_MS
+        time.sleep(0.08)
+
+    df = pd.DataFrame(rows_out, columns=[
+        "openTime", "open", "high", "low", "close", "volume", "quoteVolume", "usdtVolume",
+    ])
+    df["ts"] = pd.to_datetime(pd.to_numeric(df["openTime"], errors="coerce"), unit="ms", utc=True)
+    for col in ["open", "high", "low", "close", "volume", "quoteVolume"]:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+    df["trades"] = 0
+    df = df.dropna(subset=["ts", "open", "high", "low", "close"])
+    df = df[df["ts"] >= pd.Timestamp(start_ms, unit="ms", tz="UTC")]
+    if SPOT_CSV.exists():
+        existing = pd.read_csv(SPOT_CSV, parse_dates=["ts"])
+        existing["ts"] = pd.to_datetime(existing["ts"], utc=True)
+        df = pd.concat([existing, df], ignore_index=True)
+        cutoff = pd.Timestamp(start_ms, unit="ms", tz="UTC")
+        df = df[df["ts"] >= cutoff]
+    df = df.drop_duplicates("ts").sort_values("ts").reset_index(drop=True)
+    df = df[["ts", "open", "high", "low", "close", "volume", "quoteVolume", "trades"]]
+    df.to_csv(SPOT_CSV, index=False)
+    return df
+
+
 def run_script(name: str) -> None:
     subprocess.run([sys.executable, str(ROOT / name)], cwd=ROOT, check=True)
 
 
-def write_state(df: pd.DataFrame, *, backtest: bool) -> None:
+def write_state(df: pd.DataFrame, *, backtest: bool, source: str) -> None:
     state = {
         "updated_at": pd.Timestamp.now(tz="Asia/Singapore").isoformat(),
-        "source": "Binance Spot BTCUSDT 15m",
+        "source": f"{source.title()} Spot BTCUSDT 15m",
         "last_kline_utc": df["ts"].max().isoformat(),
         "last_kline_sgt": df["ts"].max().tz_convert("Asia/Singapore").isoformat(),
         "last_close": float(df["close"].iloc[-1]),
@@ -96,12 +142,12 @@ def write_state(df: pd.DataFrame, *, backtest: bool) -> None:
     REFRESH_STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def refresh_once(*, backtest: bool) -> None:
-    df = fetch_spot_15m()
+def refresh_once(*, backtest: bool, source: str) -> None:
+    df = fetch_bitget_spot_15m() if source == "bitget" else fetch_spot_15m()
     if backtest:
         run_script("backtest_confluence_range.py")
     run_script("build_strategy_board.py")
-    write_state(df, backtest=backtest)
+    write_state(df, backtest=backtest, source=source)
     print(
         "refreshed",
         f"last={df['ts'].max().tz_convert('Asia/Singapore')}",
@@ -114,19 +160,20 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--loop", action="store_true", help="refresh forever")
     parser.add_argument("--no-backtest", action="store_true", help="skip the backtest on this run")
+    parser.add_argument("--source", choices=("binance", "bitget"), default="binance")
     parser.add_argument("--kline-seconds", type=int, default=15 * 60)
     parser.add_argument("--backtest-seconds", type=int, default=60 * 60)
     args = parser.parse_args()
 
     if not args.loop:
-        refresh_once(backtest=not args.no_backtest)
+        refresh_once(backtest=not args.no_backtest, source=args.source)
         return
 
     last_backtest = 0.0
     while True:
         now = time.time()
         should_backtest = not args.no_backtest and now - last_backtest >= args.backtest_seconds
-        refresh_once(backtest=should_backtest)
+        refresh_once(backtest=should_backtest, source=args.source)
         if should_backtest:
             last_backtest = now
         time.sleep(args.kline_seconds)
