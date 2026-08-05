@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-04T00:41:24.110822+08:00",
+  "updated_at": "2026-08-05T11:09:30.079152+08:00",
   "source": "Binance Spot BTCUSDT 15m",
-  "last_kline_utc": "2026-08-03T16:30:00+00:00",
-  "last_kline_sgt": "2026-08-04T00:30:00+08:00",
-  "last_close": 63806.0,
-  "backtest_ran": true,
+  "last_kline_utc": "2026-08-05T03:00:00+00:00",
+  "last_kline_sgt": "2026-08-05T11:00:00+08:00",
+  "last_close": 64410.0,
+  "backtest_ran": false,
   "cadence": {
-    "live_price": "15 seconds in browser",
+    "live_price": "1 second in browser",
     "kline_and_signal": "15 minutes via this script",
     "backtest": "60 minutes via this script"
   }

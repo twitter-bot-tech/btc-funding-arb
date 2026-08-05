@@ -209,6 +209,26 @@ def main():
     obs_action = observer.get("action", "NO DATA")
     obs_action_class = "good" if obs_action == "BUY_WATCH" else "bad" if obs_action == "NO DATA" else ""
     obs_blocker_rows = "".join(f"<div class='gap'><span>阻断</span><b>{b}</b></div>" for b in obs_blockers)
+    paper_path = DATA / "paper_state.json"
+    paper = json.loads(paper_path.read_text(encoding="utf-8")) if paper_path.exists() else {}
+    paper_action = paper.get("last_action", "NO DATA")
+    paper_action_class = "good" if paper_action in ("BUY", "SELL") else "bad" if paper_action == "NO DATA" else ""
+    paper_equity = float(paper.get("equity", paper.get("capital", 10000)) or 10000)
+    paper_capital = float(paper.get("capital", 10000) or 10000)
+    paper_unreal = float(paper.get("unrealized_pnl", 0) or 0)
+    paper_realized = float(paper.get("realized_pnl", 0) or 0)
+    paper_trades_path = DATA / "paper_trades.csv"
+    paper_trade_rows = []
+    if paper_trades_path.exists():
+        paper_trades = pd.read_csv(paper_trades_path)
+        for r in paper_trades.tail(5).iloc[::-1].itertuples(index=False):
+            paper_trade_rows.append(
+                f"<tr><td>{str(r.exit_ts)[5:16]}</td><td>{money(float(r.entry_price))}</td>"
+                f"<td>{money(float(r.exit_price))}</td><td>{r.reason}</td>"
+                f"<td class='num {tone(float(r.pnl))}'>{money(float(r.pnl))}</td></tr>"
+            )
+    if not paper_trade_rows:
+        paper_trade_rows.append("<tr><td colspan='5'>暂无模拟成交</td></tr>")
 
     html = f"""<!doctype html>
 <html lang="zh-CN">
@@ -535,6 +555,26 @@ th {{ color:var(--muted); font-size:10px; background:#080d13; }}
             <div class="mini"><span>数据状态</span><b>{freshness}</b></div>
           </div>
           <div class="progress"><i></i></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="head"><b>PAPER TRADING</b><span>{str(paper.get("last_update", "未运行"))[5:16] if paper else "未运行"}</span></div>
+        <div class="body">
+          <div class="miniGrid">
+            <div class="mini"><span>模拟动作</span><b class="{paper_action_class}">{paper_action}</b></div>
+            <div class="mini"><span>模拟净值</span><b class="{tone(paper_equity - paper_capital)}">{money(paper_equity)}</b></div>
+            <div class="mini"><span>现金</span><b>{money(float(paper.get("cash", paper_capital) or paper_capital))}</b></div>
+            <div class="mini"><span>BTC 持仓</span><b>{paper.get("btc", "0")}</b></div>
+            <div class="mini"><span>浮动盈亏</span><b class="{tone(paper_unreal)}">{money(paper_unreal)}</b></div>
+            <div class="mini"><span>已实现盈亏</span><b class="{tone(paper_realized)}">{money(paper_realized)}</b></div>
+            <div class="mini"><span>入场价</span><b>{money(float(paper["entry_price"])) if paper.get("entry_price") else "-"}</b></div>
+            <div class="mini"><span>模拟成交</span><b>{paper.get("trade_count", 0)}</b></div>
+          </div>
+          <div class="gapList" style="margin-top:8px">
+            <div class="gap"><span>最近原因</span><b>{paper.get("last_reason", "未运行")}</b></div>
+          </div>
+          <div class="tableWrap" style="margin-top:8px"><table><thead><tr><th>退出</th><th>买价</th><th>卖价</th><th>原因</th><th class="num">PnL</th></tr></thead><tbody>{''.join(paper_trade_rows)}</tbody></table></div>
         </div>
       </section>
 
