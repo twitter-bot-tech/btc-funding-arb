@@ -9,10 +9,10 @@
   "hold_runs": 0,
   "last_action": "WAIT",
   "last_reason": "price_not_in_buy_zone",
-  "last_update": "2026-08-11T22:37:04.998088+08:00",
+  "last_update": "2026-08-11T14:41:41.772704+00:00",
   "realized_pnl": "0.00",
   "trade_count": 0,
-  "last_price": "64020.01",
+  "last_price": "63937.65",
   "equity": "10000.00",
   "unrealized_pnl": "0.00",
   "signal": {
