@@ -1,1 +1,1 @@
-{"donchian_signal": "HOLD", "best_funding_apy": 0.03596292857142857, "ann_basis": 0.04129714561143654, "pct_to_breakout": 0.05732462853731021, "allocation": {"cash": 55, "btc_spot": 0, "funding_arb": 0, "basis_trade": 15, "yield_pt": 30}}
+{"donchian_signal": "HOLD", "best_funding_apy": 0.0259515, "ann_basis": 0.043671188962266565, "pct_to_breakout": 0.03985369729830793, "allocation": {"cash": 65, "btc_spot": 0, "funding_arb": 0, "basis_trade": 15, "yield_pt": 20}}

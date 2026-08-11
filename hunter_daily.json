@@ -419,7 +419,95 @@
       }
     },
     "2026-08-03": {
-      "scans": 265,
+      "scans": 296,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-04": {
+      "scans": 47,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-05": {
+      "scans": 121,
+      "opps_total": 36,
+      "sum_potential_usd": 936.9999999999967,
+      "best_single_usd": 26.999999999999815,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 36
+      }
+    },
+    "2026-08-06": {
+      "scans": 130,
+      "opps_total": 7,
+      "sum_potential_usd": 175.00000000000023,
+      "best_single_usd": 25.000000000000036,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 7
+      }
+    },
+    "2026-08-07": {
+      "scans": 58,
+      "opps_total": 2,
+      "sum_potential_usd": 50.00000000000007,
+      "best_single_usd": 25.000000000000036,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 2
+      }
+    },
+    "2026-08-08": {
+      "scans": 50,
+      "opps_total": 1,
+      "sum_potential_usd": 25.000000000000036,
+      "best_single_usd": 25.000000000000036,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 1
+      }
+    },
+    "2026-08-09": {
+      "scans": 21,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-10": {
+      "scans": 234,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-11": {
+      "scans": 461,
       "opps_total": 0,
       "sum_potential_usd": 0.0,
       "best_single_usd": 0.0,

@@ -1,6 +1,6 @@
 # VPS 迁移步骤
 
-目标：让 Bitget 观察模式在 VPS 上 24 小时运行，并通过浏览器访问看板。
+目标：让 Bitget 观察模式、策略数据刷新、纸交易状态在 VPS 上 24 小时运行，并通过浏览器访问看板。
 
 当前仍然是观察模式：
 
@@ -51,8 +51,15 @@ sudo bash deploy/setup_vps_ubuntu.sh
 - 安装 Python / venv / nginx / rsync
 - 创建 `btcbot` 系统用户
 - 安装 Python 依赖
-- 安装 systemd 常驻服务
+- 安装 4 个 systemd 常驻服务
 - 安装 Nginx 看板服务
+
+常驻服务：
+
+- `strategy-refresh`：每 15 分钟拉 Bitget BTC 15m K 线，1 小时跑一次回测
+- `bitget-observer-board`：每 60 秒刷新观察状态和看板
+- `paper-trader`：每 15 分钟刷新纸交易状态
+- `bitget-live-5u-test`：每 15 分钟检查一次真实 5U 测试条件，满足信号才发小额现货单
 
 ## 4. 在 VPS 上填写 .env
 
@@ -75,14 +82,17 @@ BITGET_ALLOW_LIVE=0
 ## 5. 重启服务
 
 ```bash
-sudo systemctl restart bitget-observer-board
-sudo systemctl status bitget-observer-board
+sudo systemctl restart strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
+sudo systemctl status strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
 ```
 
 查看日志：
 
 ```bash
+journalctl -u strategy-refresh -f
 journalctl -u bitget-observer-board -f
+journalctl -u paper-trader -f
+journalctl -u bitget-live-5u-test -f
 ```
 
 健康检查：
@@ -107,25 +117,25 @@ http://你的VPS_IP/
 停止：
 
 ```bash
-sudo systemctl stop bitget-observer-board
+sudo systemctl stop strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
 ```
 
 启动：
 
 ```bash
-sudo systemctl start bitget-observer-board
+sudo systemctl start strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
 ```
 
 开机自启：
 
 ```bash
-sudo systemctl enable bitget-observer-board
+sudo systemctl enable strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
 ```
 
 取消开机自启：
 
 ```bash
-sudo systemctl disable bitget-observer-board
+sudo systemctl disable strategy-refresh bitget-observer-board paper-trader bitget-live-5u-test
 ```
 
 ## 重要提醒

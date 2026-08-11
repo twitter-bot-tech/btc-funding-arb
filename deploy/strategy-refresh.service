@@ -1,5 +1,5 @@
 [Unit]
-Description=BTC Bitget observe-only strategy board
+Description=BTC strategy data refresh and backtest loop
 After=network-online.target
 Wants=network-online.target
 
@@ -8,7 +8,7 @@ Type=simple
 WorkingDirectory=/opt/btc-funding-arb
 User=btcbot
 Group=btcbot
-ExecStart=/opt/btc-funding-arb/.venv/bin/python -u /opt/btc-funding-arb/run_bitget_observer_board.py --interval-sec 60 --quote-usdt 5 --public-only
+ExecStart=/opt/btc-funding-arb/.venv/bin/python -u /opt/btc-funding-arb/refresh_strategy_board.py --loop --source bitget --kline-seconds 900 --backtest-seconds 3600
 Restart=always
 RestartSec=15
 Environment=PYTHONUNBUFFERED=1

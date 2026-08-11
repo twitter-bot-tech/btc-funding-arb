@@ -1,0 +1,17 @@
+[Unit]
+Description=BTC public paper trading loop
+After=network-online.target strategy-refresh.service
+Wants=network-online.target strategy-refresh.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/btc-funding-arb
+User=btcbot
+Group=btcbot
+ExecStart=/opt/btc-funding-arb/.venv/bin/python -u /opt/btc-funding-arb/run_paper_trader_loop.py --interval-sec 900 --capital 10000 --quote-usdt 50
+Restart=always
+RestartSec=15
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

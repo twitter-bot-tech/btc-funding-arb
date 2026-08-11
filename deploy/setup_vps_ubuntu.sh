@@ -3,7 +3,12 @@ set -euo pipefail
 
 APP_DIR="${APP_DIR:-/opt/btc-funding-arb}"
 APP_USER="${APP_USER:-btcbot}"
-SERVICE="bitget-observer-board"
+SERVICES=(
+  "strategy-refresh"
+  "bitget-observer-board"
+  "paper-trader"
+  "bitget-live-5u-test"
+)
 
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "run as root: sudo bash deploy/setup_vps_ubuntu.sh"
@@ -32,10 +37,14 @@ else
   chmod 600 "$APP_DIR/.env"
 fi
 
-cp "$APP_DIR/deploy/$SERVICE.service" "/etc/systemd/system/$SERVICE.service"
+for SERVICE in "${SERVICES[@]}"; do
+  cp "$APP_DIR/deploy/$SERVICE.service" "/etc/systemd/system/$SERVICE.service"
+done
 systemctl daemon-reload
-systemctl enable "$SERVICE"
-systemctl restart "$SERVICE"
+for SERVICE in "${SERVICES[@]}"; do
+  systemctl enable "$SERVICE"
+  systemctl restart "$SERVICE"
+done
 
 cp "$APP_DIR/deploy/nginx-bitget-board.conf" /etc/nginx/sites-available/bitget-board
 ln -sf /etc/nginx/sites-available/bitget-board /etc/nginx/sites-enabled/bitget-board
@@ -43,7 +52,13 @@ rm -f /etc/nginx/sites-enabled/default
 nginx -t
 systemctl reload nginx
 
-echo "installed $SERVICE"
-echo "status: systemctl status $SERVICE"
-echo "logs: journalctl -u $SERVICE -f"
+echo "installed services: ${SERVICES[*]}"
+echo "status:"
+for SERVICE in "${SERVICES[@]}"; do
+  echo "  systemctl status $SERVICE"
+done
+echo "logs:"
+for SERVICE in "${SERVICES[@]}"; do
+  echo "  journalctl -u $SERVICE -f"
+done
 echo "health: $APP_DIR/.venv/bin/python $APP_DIR/check_bitget_observer_health.py"

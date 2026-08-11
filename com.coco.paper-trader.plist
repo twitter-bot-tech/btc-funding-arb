@@ -4,24 +4,25 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.coco.bitget-observer-board</string>
+  <string>com.coco.paper-trader</string>
   <key>ProgramArguments</key>
   <array>
     <string>/Users/coco/btc-funding-arb/.venv/bin/python</string>
     <string>-u</string>
-    <string>/Users/coco/btc-funding-arb/run_bitget_observer_board.py</string>
+    <string>/Users/coco/btc-funding-arb/run_paper_trader_loop.py</string>
     <string>--interval-sec</string>
-    <string>60</string>
+    <string>900</string>
+    <string>--capital</string>
+    <string>10000</string>
     <string>--quote-usdt</string>
-    <string>5</string>
-    <string>--public-only</string>
+    <string>50</string>
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/coco/btc-funding-arb</string>
   <key>StandardOutPath</key>
-  <string>/Users/coco/btc-funding-arb/data/bitget_observer_board.log</string>
+  <string>/Users/coco/btc-funding-arb/data/paper_trader.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/coco/btc-funding-arb/data/bitget_observer_board.err.log</string>
+  <string>/Users/coco/btc-funding-arb/data/paper_trader.err.log</string>
   <key>RunAtLoad</key>
   <true/>
   <key>KeepAlive</key>

@@ -1,72 +1,78 @@
 {
-  "date": "2026-08-03",
-  "generated_at": "2026-08-03T14:15:45.164267+00:00",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T14:10:05.456854+00:00",
   "donchian": {
     "signal": "HOLD",
-    "close": 63326.01,
-    "20d_high": 66956.15,
-    "20d_low": 62272.2,
-    "pct_to_breakout": 0.05732462853731021,
-    "pct_to_breakdown": 0.016641029491673405
+    "close": 64182.0,
+    "20d_high": 66739.89,
+    "20d_low": 62275.0,
+    "pct_to_breakout": 0.03985369729830793,
+    "pct_to_breakdown": 0.029712380418185785
   },
   "funding": {
     "binance": {
-      "latest": 6.364e-05,
-      "apy_3d": 0.032873725,
-      "apy_7d": 0.03596292857142857,
-      "apy_30d": 0.033621427499999995,
+      "latest": 1.962e-05,
+      "apy_3d": 0.029607583333333336,
+      "apy_7d": 0.0259515,
+      "apy_30d": 0.027818839999999997,
       "samples_30d": 30
     },
     "bybit": {
-      "latest": -1.06e-05,
-      "apy_3d": 0.0013474583333333335,
-      "apy_7d": 0.014082742857142857,
-      "apy_30d": 0.013951942500000002,
+      "latest": 4.871e-05,
+      "apy_3d": 0.024995200000000002,
+      "apy_7d": 0.01890856428571429,
+      "apy_30d": 0.0200306525,
       "samples_30d": 30
     },
-    "okx": null
+    "okx": {
+      "latest": -1.67608519619e-05,
+      "apy_3d": 0.015184504835003998,
+      "apy_7d": 0.02106464595835,
+      "apy_30d": 0.0245245006259881,
+      "samples_30d": 30
+    }
   },
   "basis": {
     "symbol": "BTCUSDT_260925",
     "expiry": "2026-09-25T08:00:00+00:00",
-    "days_to_expiry": 52.7,
-    "fut_price": 63702.3,
-    "spot_price": 63324.44,
-    "basis_pct": 0.005967048425536747,
-    "ann_basis": 0.04129714561143654
+    "days_to_expiry": 44.7,
+    "fut_price": 64525.6,
+    "spot_price": 64182.01,
+    "basis_pct": 0.005353369269675445,
+    "ann_basis": 0.043671188962266565
   },
   "yield": {
     "pick": "sNUSD",
-    "apy": 0.095,
-    "days_to_expiry": 51,
-    "liquidity_usd": 4288850.0,
+    "apy": 0.0892,
+    "days_to_expiry": 43,
+    "liquidity_usd": 4296335.0,
     "alloc_usd": 5000.0,
-    "source_ts": "2026-08-03T13:05:11.397664+00:00"
+    "source_ts": "2026-08-11T01:05:05.824762+00:00"
   },
-  "vol_ann": 0.2753094756832548,
+  "vol_ann": 0.20704775426033314,
   "decision": {
     "allocation_pct": {
-      "cash": 55,
+      "cash": 65,
       "btc_spot": 0,
       "funding_arb": 0,
       "basis_trade": 15,
-      "yield_pt": 30
+      "yield_pt": 20
     },
     "best_funding_venue": "binance",
-    "best_funding_apy": 0.03596292857142857,
+    "best_funding_apy": 0.0259515,
     "yield_pick": "sNUSD",
-    "yield_apy": 0.095,
+    "yield_apy": 0.0892,
     "regime": "CHOP_LOW_VOL",
     "reasons": [
-      "Funding 3.60% < cash floor 4.5% \u2192 skip (cash dominates)",
-      "Basis UPPER Q: 4.13% (\u2265P75=4.00%) \u2192 15%",
-      "Yield PT: sNUSD 9.50% APY \u2192 30% cash-enhancement sleeve",
-      "Residual 55% in USDT (~5% APY)"
+      "Funding 2.60% < cash floor 4.5% \u2192 skip (cash dominates)",
+      "Basis UPPER Q: 4.37% (\u2265P75=4.00%) \u2192 15%",
+      "Yield PT: sNUSD 8.92% APY \u2192 20% cash-enhancement sleeve",
+      "Residual 65% in USDT (~5% APY)"
     ],
-    "expected_apy": 0.05944457184171548,
-    "expected_daily_pnl": 1.628618406622342,
+    "expected_apy": 0.053640678344339984,
+    "expected_daily_pnl": 1.4696076258723283,
     "thresholds": {
-      "funding_p50": 0.03388581785714286,
+      "funding_p50": 0.02705223571428571,
       "funding_p75": 0.04,
       "funding_p90": 0.1,
       "basis_p50": 0.0,

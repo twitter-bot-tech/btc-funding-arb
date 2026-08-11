@@ -13,3 +13,7 @@ data/bitget_observer_log.jsonl
 data/bitget_observer_state.json
 data/bitget_observer_health.json
 data/bitget_observer_board.pid
+data/bitget_live_5u_health.json
+data/bitget_live_5u_ledger.jsonl
+data/bitget_live_5u_state.json
+data/paper_trader_health.json

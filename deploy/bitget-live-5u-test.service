@@ -1,0 +1,19 @@
+[Unit]
+Description=Bitget BTC guarded 5 USDT live test loop
+After=network-online.target strategy-refresh.service
+Wants=network-online.target strategy-refresh.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/btc-funding-arb
+User=btcbot
+Group=btcbot
+ExecStart=/opt/btc-funding-arb/.venv/bin/python -u /opt/btc-funding-arb/run_bitget_live_5u_test.py --interval-sec 900 --quote-usdt 5 --confirm I_UNDERSTAND_5U_LIVE_BITGET_TEST
+Restart=always
+RestartSec=15
+Environment=PYTHONUNBUFFERED=1
+Environment=BITGET_ALLOW_LIVE=1
+Environment=LIVE_5U_TEST_ALLOW=1
+
+[Install]
+WantedBy=multi-user.target
