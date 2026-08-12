@@ -58,7 +58,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",
 .range { position:relative; height:74px; border:1px solid var(--line); border-radius:8px; background:#070b10; overflow:hidden; }
 .range .buy { position:absolute; left:0; top:0; bottom:0; width:15.0%; background:rgba(40,209,124,.24); }
 .range .sell { position:absolute; right:0; top:0; bottom:0; width:15.0%; background:rgba(76,163,255,.24); }
-.range .mark { position:absolute; left:0.0%; top:9px; bottom:9px; width:3px; background:#fff; border-radius:3px; }
+.range .mark { position:absolute; left:93.5%; top:9px; bottom:9px; width:3px; background:#fff; border-radius:3px; }
 .metricGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-top:8px; }
 .rules { display:grid; gap:8px; }
 .rule b { display:block; margin-bottom:4px; }
@@ -122,7 +122,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
 .gap span { color:var(--muted); }
 .gap b { color:var(--amber); }
 .progress { height:10px; border-radius:999px; background:#202934; overflow:hidden; margin-top:8px; }
-.progress i { display:block; height:100%; width:61.2%; background:var(--green); }
+.progress i { display:block; height:100%; width:0.0%; background:var(--green); }
 .observeGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
 .observeWide { grid-column:1 / -1; }
 @media(max-width:1240px) { .grid { grid-template-columns:330px minmax(0,1fr); } .grid > aside.side { grid-column:1 / -1; grid-template-columns:repeat(2,minmax(0,1fr)); } }
@@ -134,7 +134,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
   <div class="ticker">
     <div><b>BTC/USDT</b><span>AI Signal Terminal</span><span>Bitget Spot 15m / 4h 区间</span></div>
     <div class="tickerActions">
-      <div><span>LAST</span> <strong id="livePrice">$64,038.38</strong><span id="livePriceMeta" class="liveMeta">live 待刷新</span><span>DATA 08-11 22:15</span><span>数据正常</span></div>
+      <div><span>LAST</span> <strong id="livePrice">$63,735.87</strong><span id="livePriceMeta" class="liveMeta">live 待刷新</span><span>DATA 08-12 06:00</span><span>数据正常</span></div>
       <button id="manualRefresh" class="refreshButton" type="button">刷新</button>
       <span id="refreshCountdown" class="refreshCountdown">60s</span>
     </div>
@@ -144,12 +144,12 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
     <aside class="leftStack">
       <section class="panel">
         <div class="head"><b>SIGNAL STACK</b><span>5/6 passed</span></div>
-        <div class="body"><div class="signals"><div class='sig off'><div class='sigTop'><b>RSI</b><span>OFF</span></div><strong>46.3</strong><small>RSI(14) 低位回升</small></div>
-<div class='sig on'><div class='sigTop'><b>M15</b><span>ON</span></div><strong>0.03%</strong><small>15m 动量转正</small></div>
-<div class='sig on'><div class='sigTop'><b>H1</b><span>ON</span></div><strong>-0.02%</strong><small>1h 动量不弱</small></div>
-<div class='sig on'><div class='sigTop'><b>VWAP</b><span>ON</span></div><strong>-0.13%</strong><small>4h VWAP 修复</small></div>
-<div class='sig on'><div class='sigTop'><b>SMA</b><span>ON</span></div><strong>-0.07%</strong><small>SMA8/21 结构</small></div>
-<div class='sig on'><div class='sigTop'><b>REGIME</b><span>ON</span></div><strong>8h 0.39%</strong><small>非单边下跌</small></div></div></div>
+        <div class="body"><div class="signals"><div class='sig off'><div class='sigTop'><b>RSI</b><span>OFF</span></div><strong>60.2</strong><small>RSI(14) 低位回升</small></div>
+<div class='sig on'><div class='sigTop'><b>M15</b><span>ON</span></div><strong>0.01%</strong><small>15m 动量转正</small></div>
+<div class='sig on'><div class='sigTop'><b>H1</b><span>ON</span></div><strong>-0.11%</strong><small>1h 动量不弱</small></div>
+<div class='sig on'><div class='sigTop'><b>VWAP</b><span>ON</span></div><strong>0.31%</strong><small>4h VWAP 修复</small></div>
+<div class='sig on'><div class='sigTop'><b>SMA</b><span>ON</span></div><strong>0.21%</strong><small>SMA8/21 结构</small></div>
+<div class='sig on'><div class='sigTop'><b>REGIME</b><span>ON</span></div><strong>8h -0.80%</strong><small>非单边下跌</small></div></div></div>
       </section>
       <section class="panel">
         <div class="head"><b>STRATEGY CONFIG</b><span>spot only</span></div>
@@ -175,7 +175,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
         <div class="head"><b>OBSERVATION LOG</b><span>live notes</span></div>
         <div class="body fillBody">
           <div class="sideItem"><span>当前动作</span><b>等待低位共振</b></div>
-          <div class="sideItem"><span>主要阻断</span><b>低吸区</b></div>
+          <div class="sideItem"><span>主要阻断</span><b>区间中上部</b></div>
           <div class="sideItem"><span>复核顺序</span><b>区间 -> 共振 -> 风控 -> 成交</b></div>
           <div class="sideItem"><span>下一步</span><b>等待价格回到低吸区</b></div>
         </div>
@@ -191,7 +191,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
       <section class="panel">
         <div class="head"><b>RECENT FILLS</b><span>last 7</span></div>
-        <div class="tableWrap"><table><thead><tr><th>入场</th><th>买价</th><th>卖价</th><th>退出</th><th>持仓</th><th class="num">PnL</th></tr></thead><tbody><tr><td>07-16 09:30</td><td>$64,032.86</td><td>$64,249.99</td><td>RANGE</td><td>15</td><td class='num good'>$23.44</td></tr><tr><td>07-20 08:45</td><td>$63,922.38</td><td>$64,200.00</td><td>RANGE</td><td>2</td><td class='num good'>$33.70</td></tr><tr><td>07-27 15:45</td><td>$64,580.80</td><td>$64,996.01</td><td>RANGE</td><td>14</td><td class='num good'>$56.25</td></tr><tr><td>07-28 00:45</td><td>$63,610.00</td><td>$63,350.95</td><td>TIME</td><td>16</td><td class='num bad'>$-57.02</td></tr><tr><td>07-29 17:30</td><td>$63,756.17</td><td>$64,521.24</td><td>TAKE</td><td>2</td><td class='num good'>$116.17</td></tr><tr><td>07-31 03:15</td><td>$64,258.00</td><td>$64,458.89</td><td>RANGE</td><td>12</td><td class='num good'>$20.94</td></tr><tr><td>08-10 17:30</td><td>$63,925.01</td><td>$64,181.48</td><td>RANGE</td><td>12</td><td class='num good'>$30.63</td></tr></tbody></table></div>
+        <div class="tableWrap"><table><thead><tr><th>入场</th><th>买价</th><th>卖价</th><th>退出</th><th>持仓</th><th class="num">PnL</th></tr></thead><tbody><tr><td>07-20 08:45</td><td>$63,922.38</td><td>$64,200.00</td><td>RANGE</td><td>2</td><td class='num good'>$33.71</td></tr><tr><td>07-27 15:45</td><td>$64,580.80</td><td>$64,996.01</td><td>RANGE</td><td>14</td><td class='num good'>$56.27</td></tr><tr><td>07-28 00:45</td><td>$63,610.00</td><td>$63,350.95</td><td>TIME</td><td>16</td><td class='num bad'>$-57.05</td></tr><tr><td>07-29 17:30</td><td>$63,756.17</td><td>$64,521.24</td><td>TAKE</td><td>2</td><td class='num good'>$116.22</td></tr><tr><td>07-31 03:15</td><td>$64,258.00</td><td>$64,458.89</td><td>RANGE</td><td>12</td><td class='num good'>$20.95</td></tr><tr><td>08-10 17:30</td><td>$63,925.01</td><td>$64,181.48</td><td>RANGE</td><td>12</td><td class='num good'>$30.64</td></tr><tr><td>08-11 16:15</td><td>$63,600.00</td><td>$63,675.05</td><td>RANGE</td><td>15</td><td class='num bad'>$-0.23</td></tr></tbody></table></div>
       </section>
     </aside>
 
@@ -218,11 +218,11 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
         <div class="body">
           <div class="range"><div class="buy"></div><div class="sell"></div><div class="mark"></div></div>
           <div class="metricGrid">
-            <div class="metric"><span>低吸线</span><b>$64,120.78</b></div>
-            <div class="metric"><span>现价位置</span><b>-3.79%</b></div>
-            <div class="metric"><span>止盈区</span><b>$64,427.73</b></div>
-            <div class="metric"><span>止损线</span><b>$63,542.56</b></div>
-            <div class="metric"><span>区间状态</span><b>低吸区</b></div>
+            <div class="metric"><span>低吸线</span><b>$63,315.61</b></div>
+            <div class="metric"><span>现价位置</span><b>93.48%</b></div>
+            <div class="metric"><span>止盈区</span><b>$63,690.47</b></div>
+            <div class="metric"><span>止损线</span><b>$62,729.41</b></div>
+            <div class="metric"><span>区间状态</span><b>区间中上部</b></div>
             <div class="metric"><span>SG 主窗口</span><b>13:00-16:00</b></div>
             <div class="metric"><span>单笔资金</span><b>$5,500</b></div>
             <div class="metric"><span>成本假设</span><b>0.12%</b></div>
@@ -233,9 +233,9 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       <section class="panel">
         <div class="head"><b>MARKET CONTEXT</b><span>已纳入/可辅助判断</span></div>
         <div class="body miniGrid wide">
-          <div class="mini"><span>8h 涨跌</span><b class="good">0.39%</b></div>
-          <div class="mini"><span>24h 涨跌</span><b class="bad">-0.93%</b></div>
-          <div class="mini"><span>24h 宽度</span><b>1.67%</b></div>
+          <div class="mini"><span>8h 涨跌</span><b class="bad">-0.80%</b></div>
+          <div class="mini"><span>24h 涨跌</span><b class="bad">-0.49%</b></div>
+          <div class="mini"><span>24h 宽度</span><b>1.99%</b></div>
           <div class="mini"><span>最新 15m 成交</span><b>0</b></div>
         </div>
       </section>
@@ -245,14 +245,14 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
           <div class="body">
             <div class="chartHead"><h2 class="chartTitle">90 天净值</h2><span>SGT 日期 / 账户净值</span></div>
             <svg class="spark" viewBox="0 0 620 190" preserveAspectRatio="none">
-              <polyline points="0.0,136.2 7.0,136.2 13.9,136.2 20.9,136.2 27.9,136.2 34.8,126.6 41.8,126.6 48.8,126.6 55.7,126.6 62.7,126.6 69.7,126.6 76.6,126.6 83.6,132.9 90.6,141.9 97.5,155.8 104.5,155.8 111.5,155.8 118.4,155.8 125.4,164.0 132.4,155.5 139.3,146.3 146.3,145.2 153.3,154.1 160.2,154.1 167.2,147.9 174.2,133.4 181.1,133.4 188.1,133.4 195.1,143.9 202.0,129.1 209.0,129.1 216.0,129.1 222.9,129.1 229.9,129.1 236.9,129.1 243.8,131.3 250.8,131.3 257.8,131.3 264.7,131.3 271.7,131.3 278.7,139.8 285.6,139.8 292.6,139.8 299.6,109.9 306.5,109.9 313.5,109.9 320.4,79.4 327.4,79.4 334.4,70.4 341.3,70.4 348.3,54.8 355.3,54.8 362.2,54.8 369.2,39.0 376.2,21.8 383.1,21.8 390.1,21.8 397.1,21.8 404.0,21.8 411.0,21.8 418.0,37.0 424.9,37.0 431.9,37.0 438.9,33.7 445.8,33.7 452.8,33.7 459.8,33.7 466.7,29.1 473.7,29.1 480.7,29.1 487.6,29.1 494.6,29.1 501.6,29.1 508.5,29.1 515.5,30.6 522.5,29.2 529.4,29.2 536.4,13.1 543.4,10.2 550.3,10.2 557.3,10.2 564.3,10.2 571.2,10.2 578.2,10.2 585.2,10.2 592.1,10.2 599.1,10.2 606.1,10.2 613.0,10.2 620.0,6.0" fill="none" stroke="#4ca3ff" stroke-width="3"/>
+              <polyline points="0.0,136.2 7.0,136.2 13.9,136.2 20.9,136.2 27.9,126.6 34.8,126.6 41.8,126.6 48.8,126.6 55.7,126.6 62.7,126.6 69.7,126.6 76.6,132.9 83.6,141.9 90.6,155.8 97.5,155.8 104.5,155.8 111.5,155.8 118.4,164.0 125.4,155.5 132.4,146.3 139.3,145.2 146.3,154.1 153.3,154.1 160.2,147.9 167.2,133.4 174.2,133.4 181.1,133.4 188.1,143.9 195.1,129.1 202.0,129.1 209.0,129.1 216.0,129.1 222.9,129.1 229.9,129.1 236.9,131.3 243.8,131.3 250.8,131.3 257.8,131.3 264.7,131.3 271.7,139.8 278.7,139.8 285.6,139.8 292.6,109.9 299.6,109.9 306.5,109.9 313.5,79.4 320.4,79.4 327.4,70.4 334.4,70.4 341.3,54.8 348.3,54.8 355.3,54.8 362.2,39.0 369.2,21.8 376.2,21.8 383.1,21.8 390.1,21.8 397.1,21.8 404.0,21.8 411.0,37.0 418.0,37.0 424.9,37.0 431.9,33.7 438.9,33.7 445.8,33.7 452.8,33.7 459.8,29.1 466.7,29.1 473.7,29.1 480.7,29.1 487.6,29.1 494.6,29.1 501.6,29.1 508.5,30.6 515.5,29.2 522.5,29.2 529.4,13.1 536.4,10.2 543.4,10.2 550.3,10.2 557.3,10.2 564.3,10.2 571.2,10.2 578.2,10.2 585.2,10.2 592.1,10.2 599.1,10.2 606.1,10.2 613.0,6.0 620.0,6.0" fill="none" stroke="#4ca3ff" stroke-width="3"/>
             </svg>
-            <div class="chartAxis"><span>05-14</span><span>06-05</span><span>06-28</span><span>07-20</span><span>08-11</span></div>
+            <div class="chartAxis"><span>05-15</span><span>06-06</span><span>06-29</span><span>07-21</span><span>08-12</span></div>
             <div class="chartStats">
-              <div><span>起始</span><b>$9,995.64</b></div>
-              <div><span>当前</span><b class="good">$10,937.64</b></div>
-              <div><span>最高</span><b>$10,937.64</b></div>
-              <div><span>最低</span><b>$9,794.28</b></div>
+              <div><span>起始</span><b>$10,000.00</b></div>
+              <div><span>当前</span><b class="good">$10,942.17</b></div>
+              <div><span>最高</span><b>$10,942.40</b></div>
+              <div><span>最低</span><b>$9,798.55</b></div>
             </div>
           </div>
         </div>
@@ -260,20 +260,20 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
           <div class="body">
             <div class="chartHead"><h2 class="chartTitle">30 天每日盈亏</h2><span>点击柱子查看单日</span></div>
             <svg class="pnlSvg" viewBox="0 0 620 205" preserveAspectRatio="none">
-              <line x1='62' y1='171.0' x2='610' y2='171.0' class='gridLine'/><text x='52' y='175.0' class='axisText' text-anchor='end'>$-150</text><line x1='62' y1='144.8' x2='610' y2='144.8' class='gridLine'/><text x='52' y='148.8' class='axisText' text-anchor='end'>$-100</text><line x1='62' y1='118.7' x2='610' y2='118.7' class='gridLine'/><text x='52' y='122.7' class='axisText' text-anchor='end'>$-50</text><line x1='62' y1='92.5' x2='610' y2='92.5' class='gridLine'/><text x='52' y='96.5' class='axisText' text-anchor='end'>$0</text><line x1='62' y1='66.3' x2='610' y2='66.3' class='gridLine'/><text x='52' y='70.3' class='axisText' text-anchor='end'>$50</text><line x1='62' y1='40.2' x2='610' y2='40.2' class='gridLine'/><text x='52' y='44.2' class='axisText' text-anchor='end'>$100</text><line x1='62' y1='14.0' x2='610' y2='14.0' class='gridLine'/><text x='52' y='18.0' class='axisText' text-anchor='end'>$150</text>
-              <line x1="62" y1="92.5" x2="610" y2="92.5" class="zeroLine"/>
-              <rect class='pnlBarRect bad' x='65.8' y='92.5' width='10.6' height='57.5' rx='3' data-date='2026-07-13' data-pnl='$-109.86' data-equity='$10,713.57'/><rect class='pnlBarRect good' x='84.1' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-14' data-pnl='$0.00' data-equity='$10,713.57'/><rect class='pnlBarRect good' x='102.4' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-15' data-pnl='$0.00' data-equity='$10,713.57'/><rect class='pnlBarRect good' x='120.6' y='80.2' width='10.6' height='12.3' rx='3' data-date='2026-07-16' data-pnl='$23.43' data-equity='$10,737.00'/><rect class='pnlBarRect good' x='138.9' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-17' data-pnl='$0.00' data-equity='$10,737.00'/><rect class='pnlBarRect good' x='157.2' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-18' data-pnl='$0.00' data-equity='$10,737.00'/><rect class='pnlBarRect good' x='175.4' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-19' data-pnl='$0.00' data-equity='$10,737.00'/><rect class='pnlBarRect good' x='193.7' y='74.9' width='10.6' height='17.6' rx='3' data-date='2026-07-20' data-pnl='$33.70' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='212.0' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-21' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='230.2' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-22' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='248.5' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-23' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='266.8' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-24' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='285.0' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-25' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect good' x='303.3' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-26' data-pnl='$0.00' data-equity='$10,770.70'/><rect class='pnlBarRect bad' x='321.6' y='92.5' width='10.6' height='5.7' rx='3' data-date='2026-07-27' data-pnl='$-10.93' data-equity='$10,759.77'/><rect class='pnlBarRect good' x='339.8' y='87.2' width='10.6' height='5.3' rx='3' data-date='2026-07-28' data-pnl='$10.14' data-equity='$10,769.92'/><rect class='pnlBarRect good' x='358.1' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-07-29' data-pnl='$0.00' data-equity='$10,769.92'/><rect class='pnlBarRect good' x='376.4' y='31.7' width='10.6' height='60.8' rx='3' data-date='2026-07-30' data-pnl='$116.16' data-equity='$10,886.08'/><rect class='pnlBarRect good' x='394.6' y='81.5' width='10.6' height='11.0' rx='3' data-date='2026-07-31' data-pnl='$20.93' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='412.9' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-01' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='431.2' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-02' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='449.4' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-03' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='467.7' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-04' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='486.0' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-05' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='504.2' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-06' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='522.5' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-07' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='540.8' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-08' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='559.0' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-09' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good' x='577.3' y='92.5' width='10.6' height='2.0' rx='3' data-date='2026-08-10' data-pnl='$0.00' data-equity='$10,907.01'/><rect class='pnlBarRect good active' x='595.6' y='76.5' width='10.6' height='16.0' rx='3' data-date='2026-08-11' data-pnl='$30.62' data-equity='$10,937.64'/>
+              <line x1='62' y1='171.0' x2='610' y2='171.0' class='gridLine'/><text x='52' y='175.0' class='axisText' text-anchor='end'>$-50</text><line x1='62' y1='131.8' x2='610' y2='131.8' class='gridLine'/><text x='52' y='135.8' class='axisText' text-anchor='end'>$0</text><line x1='62' y1='92.5' x2='610' y2='92.5' class='gridLine'/><text x='52' y='96.5' class='axisText' text-anchor='end'>$50</text><line x1='62' y1='53.2' x2='610' y2='53.2' class='gridLine'/><text x='52' y='57.2' class='axisText' text-anchor='end'>$100</text><line x1='62' y1='14.0' x2='610' y2='14.0' class='gridLine'/><text x='52' y='18.0' class='axisText' text-anchor='end'>$150</text>
+              <line x1="62" y1="131.8" x2="610" y2="131.8" class="zeroLine"/>
+              <rect class='pnlBarRect good' x='65.8' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-14' data-pnl='$0.00' data-equity='$10,718.24'/><rect class='pnlBarRect good' x='84.1' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-15' data-pnl='$0.00' data-equity='$10,718.24'/><rect class='pnlBarRect good' x='102.4' y='113.3' width='10.6' height='18.4' rx='3' data-date='2026-07-16' data-pnl='$23.44' data-equity='$10,741.68'/><rect class='pnlBarRect good' x='120.6' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-17' data-pnl='$0.00' data-equity='$10,741.68'/><rect class='pnlBarRect good' x='138.9' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-18' data-pnl='$0.00' data-equity='$10,741.68'/><rect class='pnlBarRect good' x='157.2' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-19' data-pnl='$0.00' data-equity='$10,741.68'/><rect class='pnlBarRect good' x='175.4' y='105.3' width='10.6' height='26.5' rx='3' data-date='2026-07-20' data-pnl='$33.71' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='193.7' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-21' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='212.0' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-22' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='230.2' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-23' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='248.5' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-24' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='266.8' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-25' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect good' x='285.0' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-26' data-pnl='$0.00' data-equity='$10,775.39'/><rect class='pnlBarRect bad' x='303.3' y='131.8' width='10.6' height='8.6' rx='3' data-date='2026-07-27' data-pnl='$-10.93' data-equity='$10,764.46'/><rect class='pnlBarRect good' x='321.6' y='123.8' width='10.6' height='8.0' rx='3' data-date='2026-07-28' data-pnl='$10.15' data-equity='$10,774.61'/><rect class='pnlBarRect good' x='339.8' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-07-29' data-pnl='$0.00' data-equity='$10,774.61'/><rect class='pnlBarRect good' x='358.1' y='40.5' width='10.6' height='91.2' rx='3' data-date='2026-07-30' data-pnl='$116.21' data-equity='$10,890.82'/><rect class='pnlBarRect good' x='376.4' y='115.3' width='10.6' height='16.4' rx='3' data-date='2026-07-31' data-pnl='$20.94' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='394.6' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-01' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='412.9' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-02' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='431.2' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-03' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='449.4' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-04' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='467.7' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-05' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='486.0' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-06' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='504.2' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-07' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='522.5' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-08' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='540.8' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-09' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='559.0' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-10' data-pnl='$0.00' data-equity='$10,911.76'/><rect class='pnlBarRect good' x='577.3' y='107.7' width='10.6' height='24.0' rx='3' data-date='2026-08-11' data-pnl='$30.64' data-equity='$10,942.40'/><rect class='pnlBarRect bad active' x='595.6' y='131.8' width='10.6' height='2.0' rx='3' data-date='2026-08-12' data-pnl='$-0.23' data-equity='$10,942.17'/>
             </svg>
-            <div class="barAxis"><span>07-13</span><span>07-20</span><span>07-27</span><span>08-03</span><span>08-11</span></div>
+            <div class="barAxis"><span>07-14</span><span>07-21</span><span>07-28</span><span>08-04</span><span>08-12</span></div>
             <div class="pnlReadout">
-              <div><span>选中日期</span><b id="pnlDate">2026-08-11</b></div>
-              <div><span>当日盈亏</span><b id="pnlValue" class="good">$30.62</b></div>
-              <div><span>当日净值</span><b id="pnlEquity">$10,937.64</b></div>
+              <div><span>选中日期</span><b id="pnlDate">2026-08-12</b></div>
+              <div><span>当日盈亏</span><b id="pnlValue" class="bad">$-0.23</b></div>
+              <div><span>当日净值</span><b id="pnlEquity">$10,942.17</b></div>
             </div>
             <div class="pnlStats">
-              <div><span>今日</span><b class="good">$30.62</b></div>
-              <div><span>最高日</span><b class="good">$116.16</b></div>
-              <div><span>最低日</span><b class="bad">$-109.86</b></div>
+              <div><span>今日</span><b class="bad">$-0.23</b></div>
+              <div><span>最高日</span><b class="good">$116.21</b></div>
+              <div><span>最低日</span><b class="bad">$-10.93</b></div>
               <div><span>有交易日</span><b>8/30</b></div>
             </div>
           </div>
@@ -281,7 +281,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
         <div class="panel">
           <div class="body">
             <h2 class="chartTitle">最近每日结果</h2>
-            <div class="tableWrap"><table class="dailyTable"><thead><tr><th>日期</th><th class="num">盈亏</th><th class="num">净值</th></tr></thead><tbody><tr><td>2026-08-11</td><td class='num good'>$30.62</td><td class='num'>$10,937.64</td></tr><tr><td>2026-08-10</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-09</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-08</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-07</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-06</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-05</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-04</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-03</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr><tr><td>2026-08-02</td><td class='num good'>$0.00</td><td class='num'>$10,907.01</td></tr></tbody></table></div>
+            <div class="tableWrap"><table class="dailyTable"><thead><tr><th>日期</th><th class="num">盈亏</th><th class="num">净值</th></tr></thead><tbody><tr><td>2026-08-12</td><td class='num bad'>$-0.23</td><td class='num'>$10,942.17</td></tr><tr><td>2026-08-11</td><td class='num good'>$30.64</td><td class='num'>$10,942.40</td></tr><tr><td>2026-08-10</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-09</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-08</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-07</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-06</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-05</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-04</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr><tr><td>2026-08-03</td><td class='num good'>$0.00</td><td class='num'>$10,911.76</td></tr></tbody></table></div>
           </div>
         </div>
         <div class="panel">
@@ -303,27 +303,27 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       <section class="panel">
         <div class="head"><b>BACKTEST</b><span>$10,000 spot</span></div>
         <div class="body miniGrid">
-          <div class="mini"><span>近 30 天</span><b class="good">$105.52</b></div>
-          <div class="mini"><span>近 90 天</span><b class="good">$937.64</b></div>
+          <div class="mini"><span>近 30 天</span><b class="good">$105.31</b></div>
+          <div class="mini"><span>近 90 天</span><b class="good">$942.17</b></div>
           <div class="mini"><span>胜率</span><b>65.7%</b></div>
           <div class="mini"><span>最大回撤</span><b class="bad">-2.69%</b></div>
           <div class="mini"><span>交易次数</span><b>35</b></div>
-          <div class="mini"><span>Profit Factor</span><b>2.29</b></div>
-          <div class="mini"><span>Sharpe</span><b>4.23</b></div>
-          <div class="mini"><span>平均每笔</span><b class="good">$26.79</b></div>
-          <div class="mini"><span>最好单笔</span><b class="good">$116.17</b></div>
-          <div class="mini"><span>最差单笔</span><b class="bad">$-171.32</b></div>
-          <div class="mini"><span>达 $50 天数</span><b>14.3%</b></div>
-          <div class="mini"><span>亏 $50 天数</span><b>8.8%</b></div>
+          <div class="mini"><span>Profit Factor</span><b>2.54</b></div>
+          <div class="mini"><span>Sharpe</span><b>3.85</b></div>
+          <div class="mini"><span>平均每笔</span><b class="good">$26.92</b></div>
+          <div class="mini"><span>最好单笔</span><b class="good">$116.22</b></div>
+          <div class="mini"><span>最差单笔</span><b class="bad">$-171.40</b></div>
+          <div class="mini"><span>达 $50 天数</span><b>13.2%</b></div>
+          <div class="mini"><span>亏 $50 天数</span><b>7.7%</b></div>
         </div>
       </section>
 
       <section class="panel">
-        <div class="head"><b>TODAY / SESSION</b><span>08-11 22:30 SGT</span></div>
+        <div class="head"><b>TODAY / SESSION</b><span>08-12 06:00 SGT</span></div>
         <div class="body">
           <div class="miniGrid">
-            <div class="mini"><span>今日 PnL</span><b class="good">$30.62</b></div>
-            <div class="mini"><span>$50 目标</span><b>61.2%</b></div>
+            <div class="mini"><span>今日 PnL</span><b class="bad">$-0.23</b></div>
+            <div class="mini"><span>$50 目标</span><b>0.0%</b></div>
             <div class="mini"><span>交易时段</span><b>非 13:00-16:00</b></div>
             <div class="mini"><span>数据状态</span><b>数据正常</b></div>
           </div>
@@ -332,7 +332,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
 
       <section class="panel">
-        <div class="head"><b>PAPER TRADING</b><span>08-11T22:22</span></div>
+        <div class="head"><b>PAPER TRADING</b><span>08-12T02:20</span></div>
         <div class="body">
           <div class="miniGrid">
             <div class="mini"><span>模拟动作</span><b class="">WAIT</b></div>
@@ -352,18 +352,18 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
       </section>
 
       <section class="panel">
-        <div class="head"><b>BITGET OBSERVE</b><span>08-11T22:36</span></div>
+        <div class="head"><b>BITGET OBSERVE</b><span>08-12T11:17</span></div>
         <div class="body">
           <div class="observeGrid">
             <div class="mini"><span>观察动作</span><b class="">WAIT</b></div>
-            <div class="mini"><span>Bitget 实时价</span><b>$64,020.01</b></div>
+            <div class="mini"><span>Bitget 实时价</span><b>$63,712.16</b></div>
             <div class="mini"><span>UTA 可用</span><b>PUBLIC_TEST USDT</b></div>
             <div class="mini"><span>计划金额</span><b>5 USDT</b></div>
-            <div class="mini"><span>计划 BTC</span><b>0.00007810</b></div>
+            <div class="mini"><span>计划 BTC</span><b>0.00007847</b></div>
             <div class="mini"><span>观察止盈</span><b>1.20%</b></div>
-            <div class="mini"><span>低吸上限</span><b>$64120.78</b></div>
-            <div class="mini"><span>止损线</span><b>$63542.56</b></div>
-            <div class="mini observeWide"><span>信号状态</span><b>5/6 / -3.79% / 等待</b></div>
+            <div class="mini"><span>低吸上限</span><b>$63315.62</b></div>
+            <div class="mini"><span>止损线</span><b>$62729.41</b></div>
+            <div class="mini observeWide"><span>信号状态</span><b>5/6 / 93.48% / 等待</b></div>
           </div>
           <div class="gapList" style="margin-top:8px"><div class='gap'><span>阻断</span><b>价格不在低吸区或区间宽度不足</b></div></div>
         </div>
@@ -371,7 +371,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
 
       <section class="panel">
         <div class="head"><b>SCAN WINDOWS</b><span>最近 12 根 15m</span></div>
-        <div class="tableWrap"><table><thead><tr><th>SGT</th><th>信号</th><th>位置</th><th>振幅</th><th>状态</th></tr></thead><tbody><tr><td>19:45</td><td>5/6</td><td>101.05%</td><td>0.53%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>20:00</td><td>5/6</td><td>119.62%</td><td>0.55%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>20:15</td><td>5/6</td><td>61.25%</td><td>0.69%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>20:30</td><td>4/6</td><td>62.04%</td><td>0.67%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>20:45</td><td>5/6</td><td>58.92%</td><td>0.62%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>21:00</td><td>4/6</td><td>51.40%</td><td>0.56%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>21:15</td><td>4/6</td><td>16.20%</td><td>0.55%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>21:30</td><td>4/6</td><td>1.75%</td><td>0.50%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>21:45</td><td>4/6</td><td>30.55%</td><td>0.68%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>22:00</td><td>5/6</td><td>25.65%</td><td>0.68%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>22:15</td><td>4/6</td><td>29.65%</td><td>0.68%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>22:30</td><td>5/6</td><td>-3.79%</td><td>0.68%</td><td><span class='tag watch'>WATCH</span></td></tr></tbody></table></div>
+        <div class="tableWrap"><table><thead><tr><th>SGT</th><th>信号</th><th>位置</th><th>振幅</th><th>状态</th></tr></thead><tbody><tr><td>03:15</td><td>3/6</td><td>20.05%</td><td>1.00%</td><td><span class='tag skip'>SKIP</span></td></tr><tr><td>03:30</td><td>5/6</td><td>34.66%</td><td>1.00%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>03:45</td><td>4/6</td><td>71.75%</td><td>0.67%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>04:00</td><td>4/6</td><td>103.55%</td><td>0.67%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>04:15</td><td>4/6</td><td>90.91%</td><td>0.76%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>04:30</td><td>4/6</td><td>91.49%</td><td>0.76%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>04:45</td><td>5/6</td><td>99.03%</td><td>0.81%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>05:00</td><td>5/6</td><td>98.00%</td><td>0.81%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>05:15</td><td>4/6</td><td>85.20%</td><td>0.82%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>05:30</td><td>4/6</td><td>81.04%</td><td>0.85%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>05:45</td><td>4/6</td><td>81.99%</td><td>0.85%</td><td><span class='tag watch'>WATCH</span></td></tr><tr><td>06:00</td><td>5/6</td><td>93.48%</td><td>0.85%</td><td><span class='tag watch'>WATCH</span></td></tr></tbody></table></div>
       </section>
 
       <section class="panel">
@@ -381,7 +381,7 @@ th { color:var(--muted); font-size:10px; background:#080d13; }
           <div class="rule"><b>止盈</b><span>盈利 1.20% 立即卖，或到区间 85.00%。</span></div>
           <div class="rule"><b>亏损</b><span>1% 停止加仓，2% 不开新仓，3.5% 必须处理。</span></div>
           <div class="rule"><b>执行</b><span>信号用已完成 15m K，下一根开盘成交；回测含 0.12% 往返成本。</span></div>
-          <div class="rule"><b>持仓</b><span>最长 16 根 15m K，90 天平均持仓 10.4 根 K。</span></div>
+          <div class="rule"><b>持仓</b><span>最长 16 根 15m K，90 天平均持仓 10.5 根 K。</span></div>
           <div class="rule"><b>盘口</b><span>历史 L2 未接入，订单簿失衡暂不计分，避免假回测。</span></div>
         </div>
       </section>

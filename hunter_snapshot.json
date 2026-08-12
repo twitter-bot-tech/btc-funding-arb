@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-11T14:37:34.905400+00:00",
+  "ts": "2026-08-12T03:18:46.122165+00:00",
   "n_binance_books": 3683,
-  "n_okx_books": 1329,
+  "n_okx_books": 0,
   "n_bybit_books": 550,
   "opportunities": [],
   "best_net_usd": 0,

@@ -507,7 +507,18 @@
       }
     },
     "2026-08-11": {
-      "scans": 461,
+      "scans": 488,
+      "opps_total": 0,
+      "sum_potential_usd": 0.0,
+      "best_single_usd": 0.0,
+      "by_type": {
+        "cross": 0,
+        "tri": 0,
+        "depeg": 0
+      }
+    },
+    "2026-08-12": {
+      "scans": 9,
       "opps_total": 0,
       "sum_potential_usd": 0.0,
       "best_single_usd": 0.0,
