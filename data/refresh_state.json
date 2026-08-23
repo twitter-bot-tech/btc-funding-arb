@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-24T06:55:41.597970+08:00",
+  "updated_at": "2026-08-24T07:10:42.152557+08:00",
   "source": "Bitget Spot BTCUSDT 15m",
-  "last_kline_utc": "2026-08-23T22:45:00+00:00",
-  "last_kline_sgt": "2026-08-24T06:45:00+08:00",
-  "last_close": 77647.56,
+  "last_kline_utc": "2026-08-23T23:00:00+00:00",
+  "last_kline_sgt": "2026-08-24T07:00:00+08:00",
+  "last_close": 77480.01,
   "backtest_ran": false,
   "cadence": {
     "live_price": "1 second in browser",
