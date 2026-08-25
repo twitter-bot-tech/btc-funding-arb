@@ -9,18 +9,18 @@
   "hold_runs": 0,
   "last_action": "WAIT",
   "last_reason": "price_not_in_buy_zone,score_too_low",
-  "last_update": "2026-08-25T20:46:54.730057+00:00",
+  "last_update": "2026-08-25T21:16:12.127049+00:00",
   "realized_pnl": "0.00",
   "trade_count": 0,
-  "last_price": "78357.56",
+  "last_price": "78255.28",
   "equity": "10000.00",
   "unrealized_pnl": "0.00",
   "signal": {
-    "source_ts_sgt": "2026-08-26T04:45:00+08:00",
+    "source_ts_sgt": "2026-08-26T05:15:00+08:00",
     "score": "3/6",
     "range_ok": false,
-    "pos_in_range": "-1.18%",
-    "range_width": "1.25%",
+    "pos_in_range": "26.41%",
+    "range_width": "1.88%",
     "buy_ready": false,
     "not_one_way_down": true
   }
